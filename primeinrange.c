@@ -5,12 +5,10 @@ Date   :  27/11/2019
 */
 
 #include<stdio.h>
-int main(){
-    int a,b,i,j;
-    scanf("%d",&a);
-    scanf("%d",&b);
-    int primes[b+1];
-    for(i=2;i<b+1;i++)
+unsigned long int primes[10001];
+void primenumbers(){
+	int i,j,b = 10000;
+	 for(i=2;i<b+1;i++)
         primes[i] = i;
     i=2;
     while((i*i)<=b){
@@ -22,6 +20,12 @@ int main(){
         }
         i++;
     }
+}
+int main(){
+    int a,b,i,j;
+    scanf("%d",&a);
+    scanf("%d",&b);
+    primenumbers();
     for(i=a;i<b+1;i++){
         if(primes[i])
             printf("%d ",primes[i]);
