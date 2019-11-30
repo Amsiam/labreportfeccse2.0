@@ -1,5 +1,5 @@
 /*
-Name   :  Prime numbers in range of a,b.
+Name   :  A number is prime or not.
 Author :  Aslam Mahmud Siam.
 Date   :  27/11/2019
 */
@@ -22,13 +22,13 @@ void primenumbers(){
     }
 }
 int main(){
-    int a,b,i,j;
+    int a;
     scanf("%d",&a);
-    scanf("%d",&b);
     primenumbers();
-    for(i=a;i<b+1;i++){
-        if(primes[i])
-            printf("%d ",primes[i]);
+    if(primes[a]){
+        printf("%d is a prime number.",a);
+    }else{
+        printf("%d is not a prime number.",a);
     }
     puts("");
     return 0;
